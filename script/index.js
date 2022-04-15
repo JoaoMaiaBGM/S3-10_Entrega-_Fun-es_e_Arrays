@@ -15,7 +15,8 @@ function positions(firstPlace, secondPlace, lastPlace){
     if(variavel2 > variavel3){
       podio.push(competidores[2])
     }
-    if(podio[1] == "Daniel" || podio[2] == "Daniel"){
+  
+    if(podio[0] == "Daniel" || podio[1] == "Daniel" || podio[2] == "Daniel"){
       podio[0] = `1º colocado: ${competidores[1]}`
       podio[1] = `2º colocado: ${competidores[2]}`
       podio[2] = `3º colocado: ${competidores[0]}` 
@@ -23,4 +24,4 @@ function positions(firstPlace, secondPlace, lastPlace){
   
     console.log(podio.toString())
 }
-positions("Rafael", "Daniel", "Manoel")
+positions("Daniel", "Rafael", "Manoel")
