@@ -11,18 +11,16 @@ function positions(firstPlace, secondPlace, lastPlace){
     }
     if(variavel1 > variavel2 && variavel2 > variavel3){
     podio.push(competidores[1])
-    
     }
     if(variavel2 > variavel3){
       podio.push(competidores[2])
     }
-    if(podio[1] == "Daniel"){
-      podio[0] = "1º lugar:" + ' ' + competidores[1]
-      podio[1] = "2º lugar:" + ' ' + competidores[0]
-    }else if(podio[2] == "Daniel"){
-      podio[1] = "2º lugar:" + ' ' + competidores[2]
-      podio[2] = "3º lugar:" + ' ' + competidores[1]
+    if(podio[1] == "Daniel" || podio[2] == "Daniel"){
+      podio[0] = `1º colocado: ${competidores[1]}`
+      podio[1] = `2º colocado: ${competidores[2]}`
+      podio[2] = `3º colocado: ${competidores[0]}` 
     }
-    console.log(podio)
+  
+    console.log(podio.toString())
 }
-positions("Rafael", "Manoel", "Daniel")
+positions("Rafael", "Daniel", "Manoel")
