@@ -1,27 +1,17 @@
 function positions(firstPlace, secondPlace, lastPlace){
-  let competidores = [firstPlace, secondPlace, lastPlace];
-  
-  let variavel1 = 2
-  let variavel2 = 1
-  let variavel3 = 0
 
-  let podio = []
-    if(variavel1 > variavel2 && variavel1 > variavel3){
-      podio.push(competidores[0])
-    }
-    if(variavel1 > variavel2 && variavel2 > variavel3){
-    podio.push(competidores[1])
-    }
-    if(variavel2 > variavel3){
-      podio.push(competidores[2])
-    }
+  let competidores = [firstPlace, secondPlace, lastPlace]
+
+  if(competidores[0] == "Daniel"){
+    return `1º colocado: ${firstPlace} ` + `2º colocado: ${secondPlace} ` + `3º colocado ${lastPlace} `
+  }
+
+  if(competidores[1] == "Daniel"){
+    return `1º colocado: ${secondPlace} ` + `2º colocado: ${firstPlace} ` + `3º colocado ${lastPlace} `
+  }
   
-    if(podio[0] == "Daniel" || podio[1] == "Daniel" || podio[2] == "Daniel"){
-      podio[0] = `1º colocado: ${competidores[1]}`
-      podio[1] = `2º colocado: ${competidores[2]}`
-      podio[2] = `3º colocado: ${competidores[0]}` 
-    }
-  
-    console.log(podio.toString())
+  if(competidores[2] == "Daniel"){
+    return `1º colocado: ${lastPlace} ` + `2º colocado: ${secondPlace} ` + `3º colocado ${firstPlace} `
+  }
 }
-positions("Daniel", "Rafael", "Manoel")
+console.log(positions("Rafael", "Manoel", "Daniel"))
