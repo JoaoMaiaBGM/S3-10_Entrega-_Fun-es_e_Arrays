@@ -11,7 +11,7 @@ function positions(firstPlace, secondPlace, lastPlace){
   }
   
   if(competidores[2] == "Daniel"){
-    return `1º colocado: ${lastPlace} ` + `2º colocado: ${secondPlace} ` + `3º colocado ${firstPlace} `
+    return `1º colocado: ${secondPlace} ` + `2º colocado: ${lastPlace} ` + `3º colocado ${firstPlace} `
   }
 }
-console.log(positions("Rafael", "Manoel", "Daniel"))
+console.log(positions("Manoel", "Rafael", "Daniel"))
